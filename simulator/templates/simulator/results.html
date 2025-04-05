@@ -1,0 +1,18 @@
+<h2>Simulation Results</h2>
+<p><strong>Average Time in System:</strong> {{ avg_time }}</p>
+
+<h3>Average Queue Lengths</h3>
+<ul>
+  {% for node, length in queues.items %}
+    <li>{{ node }}: {{ length }}</li>
+  {% endfor %}
+</ul>
+
+<h3>Server Utilization</h3>
+<ul>
+  {% for node, util in utilization.items %}
+    <li>{{ node }}: {{ util }}</li>
+  {% endfor %}
+</ul>
+
+<a href="/">Run Again</a>
